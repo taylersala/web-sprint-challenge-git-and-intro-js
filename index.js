@@ -246,11 +246,13 @@ Use listOfNames to do the following:
 */
 
 function listOfNames(array) {
-  return [...array]
+  const copyArray = [...array]
+  for(let i = 0; i < array.length; i++){
+    copyArray[i] = array[i].name;
+  
 }
-
-console.log('Task 1:', listOfNames(artists));
-
+return copyArray;
+}
 
 
 
@@ -263,11 +265,13 @@ Use removeArtist to do the following:
 5. Return the resulting copied array
 🌟 EXAMPLE: if removeArtist is invoked with the artists array and the number 0, it will return the resulting array with Amedeo Modigliani removed from our dataset. */
 
-function removeArtist(/*Your Code Here*/) {
-  /*Your Code Here*/
-}
-
-
+function removeArtist(array, index) {
+const copyRemoveArray = [...array];
+copyRemoveArray.splice(index, 1)
+return copyRemoveArray;
+  // array.splice(index)
+ }
+// console.log('Task: 5', removeArtist(artists, 0))
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Use addArtist to do the following: 
@@ -285,8 +289,8 @@ Use addArtist to do the following:
 5. Add the newly created object to the copied array, then return the copied array
 🌟 EXAMPLE: Invoking addArtist(artists, 'John Doe', '1988-2022', 'Full Stack Development', 'African American', 'I have a background in customer service at Big Retail Chain. I am attending BloomTech to become a Frontend Developer.') should return the artists array with the above object added to the end of the array. */
 
-function addArtist(/*Your Code Here*/) {
-  /*Your Code Here*/
+ function addArtist(array, string1, string2, string3, string4, string5) {
+//   return [...array]
 }
 
 
