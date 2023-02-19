@@ -329,16 +329,30 @@ Use artistInfo to do the following:
 function artistInfo(array, name){
   let copyInfo = [];
   for(let i = 0; i < array.length; i++){
-    if(array[i].name){
-      copyInfo.push(array[i].name && copyInfo[i].bio);
+    if(array[i].name ){
+      copyInfo.push(array[i].name && array[i].bio);
     }
   }
-  return copyInfo
+  return copyInfo.bio
 }
+
+
+// function artistInfo(array, name){
+//   return `${array.name}` && `${array.bio}`
+// }
+
+// console.log(artistInfo(artists, 'Frida Kahlo'))
+
 // return this.bio? 
 // or ${bio}
 // similar  return `the artist at index ${number} is ${array[number].name}`;
 // filter by name to get bio
+
+// good example maybe lol if this works
+// function getReviewByIndex(array, number) {
+//   return `${array[number].name} gave the restaurant a ${array[number].rating} star review, and their feedback was: ${array[number].feedback}`;
+// }
+// console.log('Task 6:', getReviewByIndex(reviews, 0))
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 9: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -351,15 +365,17 @@ Use artistByCountry to do the following:
 🌟 EXAMPLE: Invoking artistByCountry(artists, 'Spanish') will return: [ 'Salvador Dali', 'Pablo Picasso', 'Francisco Goya']
 */
 
-function artistByCountry(array, nationality){
+function artistByCountry(array, string){
   const countryArtist = [];
   for(let i = 0; i < array.length; i++){
-    if(array[i].nationality === nationality);
+    if(array[i].includes('Spanish')){
+      countryArtist.push(array[i]);
+    }
   }
-  return countryArtist;
+  return countryArtist.name;
 }
 
-
+console.log('task 9:', artistByCountry(artists, 'Spanish'))
 
 /* ***** END OF TASKS ***** */
 
