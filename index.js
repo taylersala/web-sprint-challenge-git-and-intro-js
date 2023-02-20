@@ -327,13 +327,11 @@ Use artistInfo to do the following:
 */
 
 function artistInfo(array, filterTerm){
-  let copyInfo = [];
   for(let i = 0; i < array.length; i++){
-    if(array[i].name === filterTerm){
-      copyInfo.push(array[i].bio);
-    }
+  if(array[i].name === filterTerm){
+    return array[i].bio
+   }
   }
-  return copyInfo
 }
 console.log('task: 8', artistInfo(artists, 'Frida Kahlo'))
 
