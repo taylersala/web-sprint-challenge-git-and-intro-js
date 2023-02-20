@@ -326,33 +326,18 @@ Use artistInfo to do the following:
   "Frida Kahlo de Rivera (Spanish pronunciation: [ˈfɾiða ˈkalo]; born Magdalena Carmen Frida Kahlo y Calderón; 6 July 1907 – 13 July 1954) was a Mexican artist who painted many portraits, self-portraits and works inspired by the nature and artifacts of Mexico. Inspired by the country's popular culture, she employed a naïve folk art style to explore questions of identity, postcolonialism, gender, class and race in Mexican society. Her paintings often had strong autobiographical elements and mixed realism with fantasy. In addition to belonging to the post-revolutionary Mexicayotl movement, which sought to define a Mexican identity, Kahlo has been described as a surrealist or magical realist.Born to a German father and a mestiza mother, Kahlo spent most of her childhood and adult life at her family home in Coyoacán, La Casa Azul, now known and publicly accessible as the Frida Kahlo Museum. She was disabled by polio as a child. Until a traffic accident at age eighteen caused lifelong pain and medical problems, she had been a promising student headed for medical school. During her recovery, she returned to her childhood hobby of art with the idea of becoming an artist."
 */
 
-function artistInfo(array, name){
+function artistInfo(array, filterTerm){
   let copyInfo = [];
   for(let i = 0; i < array.length; i++){
-    if(array[i].name ){
-      copyInfo.push(array[i].name && array[i].bio);
+    if(array[i].name === filterTerm){
+      copyInfo.push(array[i].bio);
     }
   }
-  return copyInfo.bio
+  return copyInfo
 }
+console.log('task: 8', artistInfo(artists, 'Frida Kahlo'))
 
 
-// function artistInfo(array, name){
-//   return `${array.name}` && `${array.bio}`
-// }
-
-// console.log(artistInfo(artists, 'Frida Kahlo'))
-
-// return this.bio? 
-// or ${bio}
-// similar  return `the artist at index ${number} is ${array[number].name}`;
-// filter by name to get bio
-
-// good example maybe lol if this works
-// function getReviewByIndex(array, number) {
-//   return `${array[number].name} gave the restaurant a ${array[number].rating} star review, and their feedback was: ${array[number].feedback}`;
-// }
-// console.log('Task 6:', getReviewByIndex(reviews, 0))
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 9: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -366,14 +351,14 @@ Use artistByCountry to do the following:
 */
 
 function artistByCountry(array, string){
-  const countryArtist = [];
-  for(let i = 0; i < array.length; i++){
-    if(array[i].includes('Spanish')){
-      countryArtist.push(array[i]);
-    }
-  }
-  return countryArtist.name;
-}
+//   const countryArtist = [];
+//   for(let i = 0; i < array.length; i++){
+//     if(array[i].includes('Spanish')){
+//       countryArtist.push(array[i]);
+//     }
+//   }
+//   return countryArtist.name;
+ }
 
 console.log('task 9:', artistByCountry(artists, 'Spanish'))
 
